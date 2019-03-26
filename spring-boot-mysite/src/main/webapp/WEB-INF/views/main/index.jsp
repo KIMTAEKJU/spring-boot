@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>${site.title}</title>
+<title>${site.title}!!!!!%#$%$#%</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link href="${pageContext.servletContext.contextPath}/assets/css/main.css" rel="stylesheet" type="text/css">
 </head>

@@ -8,34 +8,34 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-@Configuration
-@PropertySource("classpath:fileUpload/multipart.properties")
+//@Configuration
+//@PropertySource("classpath:fileUpload/multipart.properties")
 public class FileUploadConfig extends WebMvcConfigurerAdapter
 {
-	@Autowired
-	private Environment env;
-	
-	// Multipart Resolver
-	
-	public CommonsMultipartResolver multipartResolver()
-	{
-		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
-		
-		multipartResolver.setMaxUploadSize( env.getProperty("multipart.maxUploadSize", Long.class));
-		multipartResolver.setMaxInMemorySize( env.getProperty("multipart.maxInMemorySize", Integer.class));
-		multipartResolver.setDefaultEncoding(env.getProperty("multipart.defaultEncoding"));
-
-		return multipartResolver;
-	}
-
-	
-	// Resources Mapping to URL
-	
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-
-		registry.addResourceHandler( "/uploads/images/**" )
-		.addResourceLocations( "file:/duzon/uploads/" );
-	}
+//	@Autowired
+//	private Environment env;
+//	
+//	// Multipart Resolver
+//	
+//	public CommonsMultipartResolver multipartResolver()
+//	{
+//		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+//		
+//		multipartResolver.setMaxUploadSize( env.getProperty("multipart.maxUploadSize", Long.class));
+//		multipartResolver.setMaxInMemorySize( env.getProperty("multipart.maxInMemorySize", Integer.class));
+//		multipartResolver.setDefaultEncoding(env.getProperty("multipart.defaultEncoding"));
+//
+//		return multipartResolver;
+//	}
+//
+//	
+//	// Resources Mapping to URL
+//	
+//	@Override
+//	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//
+//		registry.addResourceHandler( "/uploads/images/**" )
+//		.addResourceLocations( "file:/duzon/uploads/" );
+//	}
 	
 }

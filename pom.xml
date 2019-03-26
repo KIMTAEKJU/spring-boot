@@ -13,6 +13,14 @@
 		<version>2.1.3.RELEASE</version>
 	</parent>
 	
+	<dependencies>
+		<!-- hot swap, enable live reload --> <!-- 메모리에 있는 서블릿내용을 메모리에 올라와있지않은놈과 교환하여 동기화시킴  -->
+		<dependency> 
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+	</dependencies>
+	
 	<build>
 		<plugins>
 			<plugin>
